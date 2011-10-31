@@ -1,7 +1,8 @@
 Hubot
 =====
 
-This is a version of GitHub's Campfire bot, hubot. He's pretty cool.
+This is a our version of GitHub's Campfire bot, hubot.
+Created from hubot -c with one custom script so far.
 
 This version is designed to be deployed on heroku.
 
@@ -11,7 +12,15 @@ Playing with Hubot
 You'll need to install the necessary dependencies for hubot. All of
 those dependencies are provided by [npm](http://npmjs.org).
 
+    # installs
+    % brew install node
+    % curl http://npmjs.org/install.sh | sh
+    % npm install
+
+    # To run in shell mode
     % bin/hubot
+    # To run in irc mode
+    % bin/hubot -a irc
 
 You'll see some startup output about where your scripts come from.
 
@@ -68,7 +77,7 @@ Create a separate user for your bot and get their token from the web UI.
     % heroku config:add HUBOT_CAMPFIRE_TOKEN="..."
 
 Get the numeric ids of the rooms you want the bot to join, comma
-delimited. If you want the bot to connect to `https://mysubdomain.campfirenow.com/room/42` 
+delimited. If you want the bot to connect to `https://mysubdomain.campfirenow.com/room/42`
 and `https://mysubdomain.campfirenow.com/room/1024` then you'd add it like this:
 
     % heroku config:add HUBOT_CAMPFIRE_ROOMS="42,1024"
