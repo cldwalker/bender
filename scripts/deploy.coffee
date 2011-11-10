@@ -10,7 +10,7 @@ responses = [
 ]
 
 module.exports = (robot) ->
-  robot.respond /deploy/i, (msg) ->
+  robot.hear /.*deploy/i, (msg) ->
     msg.send msg.random responses
 
 

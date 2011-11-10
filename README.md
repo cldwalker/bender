@@ -1,7 +1,7 @@
 Hubot
 =====
 
-This is a our version of GitHub's Campfire bot, hubot.
+This is our version of GitHub's Campfire bot, hubot.
 Created from hubot -c with one custom script so far.
 
 This version is designed to be deployed on heroku.

@@ -7,7 +7,7 @@
 # Optionally set HUBOT_QUOTE_MAX_LINES to limit how long a quote
 # is. Default is 4
 module.exports = (robot) ->
-  robot.respond /enlighten|quote from (.*)|quote/i, (msg) ->
+  robot.respond /(?:enlighten|quote from (.*)|quote)/i, (msg) ->
     params = {max_lines: process.env.HUBOT_QUOTE_MAX_LINES || '4'}
     if msg.match[1]
       params['source'] = msg.match[1].split(/\s+/).join('+')
