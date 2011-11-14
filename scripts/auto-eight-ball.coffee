@@ -26,6 +26,13 @@ ball = [
 
 module.exports = (robot) ->
   robot.hear /\?(\s+|$)/, (msg) ->
-    msg.send msg.random ball
+    if not @robot.brain.data.shut_up
+      msg.send msg.random ball
 
+  robot.hear /shut up$/, (msg) ->
+    @robot.brain.data.shut_up = '1'
+    msg.send ':('
 
+  robot.hear /speak up$/, (msg) ->
+    delete @robot.brain.data.shut_up
+    msg.send 'muahahahahaha'
