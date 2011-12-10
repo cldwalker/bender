@@ -29,10 +29,3 @@ module.exports = (robot) ->
     if not @robot.brain.data.shut_up
       msg.send msg.random ball
 
-  robot.hear /shut up$/, (msg) ->
-    @robot.brain.data.shut_up = '1'
-    msg.send ':('
-
-  robot.hear /speak up$/, (msg) ->
-    delete @robot.brain.data.shut_up
-    msg.send 'muahahahahaha'

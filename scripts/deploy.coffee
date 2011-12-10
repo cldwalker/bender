@@ -10,7 +10,8 @@ responses = [
 ]
 
 module.exports = (robot) ->
-  robot.hear /.*deploy/i, (msg) ->
-    msg.send msg.random responses
+  robot.hear /.*deploy(?:\s+|$)/i, (msg) ->
+    if not @robot.brain.data.shut_up
+      msg.send msg.random responses
 
 
