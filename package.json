@@ -15,7 +15,8 @@
   },
 
   "dependencies": {
-    "hubot": "1.1.11",
+    "hubot": "2.0.7",
+    "hubot-irc": "0.0.5",
     "hubot-scripts": "2.0.3",
     "wolfram": "0.1.1",
     "optparse": "1.0.1"
